@@ -1,0 +1,64 @@
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+
+    border: none;
+    background-color: rgb(235, 235, 235);
+    border-right: none;
+    padding: 5px;
+    padding-left: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+  }
+  
+  .img-class{
+    object-fit: contain;
+    height: 100%;
+  }
+
+  .bg-test{
+    background-color: aqua;
+  }
+  
+  .searchButton {
+    border: none;
+    padding-top: 5px;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(235, 235, 235);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .bg-grey{
+    background-color: #F5F5F5;
+  }
+
+  .cursor-pointer{
+    cursor: pointer;
+  }
+
+  .profile-card-text{
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0.1rem;
+  }
+
+  .profile-card-text2{
+
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

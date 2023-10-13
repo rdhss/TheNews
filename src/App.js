@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import { PersistGate } from 'redux-persist/integration/react';
+import { Provider } from 'react-redux';
 import './App.css';
+import './assets/main.css'
+import Home from './pages/Home';
+import LikedNews from './pages/LikedNews';
+import News from './pages/News'
+import SearchNews from './pages/SearchNews';
+import NotFound from './pages/NotFound'
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+import  { persistor, store } from './redux/store';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Router>
+          <Routes>
+                <Route exact path="/" element={<Home/>}/>
+                <Route exact path="/news/:id" element={<News/>}/>
+                <Route exact path="/search/:id" element={<SearchNews/>}/>
+                <Route exact path="/profile" element={<LikedNews/>}/>
+                <Route exact path="*" element={<NotFound/>}/>
+          </Routes>
+        </Router>
+      </PersistGate>
+    </Provider>
   );
 }
 
