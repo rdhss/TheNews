@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -9,7 +8,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import { Container, Input, Stack } from '@mui/material';
+import { Container, Stack } from '@mui/material';
 import { FavoriteSharp, Newspaper } from '@mui/icons-material';
 import SearchBar from './SearchBar';
 import { useNavigate } from 'react-router-dom';
